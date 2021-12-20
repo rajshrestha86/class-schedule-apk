@@ -35,7 +35,7 @@ public class adapter_assignment extends ArrayAdapter<object_assignment> {
     {
         super(context, 0, objects);
         Log.i("Number of Objects", String.valueOf(objects.size()));
-***REMOVED***
+    }
 
     @NonNull
     @Override
@@ -81,8 +81,8 @@ public class adapter_assignment extends ArrayAdapter<object_assignment> {
                         ((TextView) ConvertView.findViewById(R.id.assg_rem_text)).setText("Assignment due date has reached. Change the status.");
                         _assg_remaining_days.setText("");
 
-            ***REMOVED***
-***REMOVED***else
+                    }
+        }else
         {
             TextView _assg_remaining_days = (TextView) ConvertView.findViewById(R.id.assg_list_rem);
             ((TextView) ConvertView.findViewById(R.id.assg_rem_text)).setTextColor(Color.parseColor("#43A047"));
@@ -91,7 +91,7 @@ public class adapter_assignment extends ArrayAdapter<object_assignment> {
             ((ImageView) ConvertView.findViewById(R.id.notice_image)).setVisibility(View.GONE);
             _assg_remaining_days.setText("");
 
-***REMOVED***
+        }
 
 
 
@@ -110,8 +110,8 @@ public class adapter_assignment extends ArrayAdapter<object_assignment> {
 
 
         return ConvertView;
-***REMOVED***
+    }
 
 
 
-***REMOVED***
+}

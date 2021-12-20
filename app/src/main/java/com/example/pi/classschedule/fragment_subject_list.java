@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 
 /**
- * A simple {@link Fragment***REMOVED*** subclass.
+ * A simple {@link Fragment} subclass.
  */
 public class fragment_subject_list extends Fragment {
 
@@ -30,7 +30,7 @@ public class fragment_subject_list extends Fragment {
     private ListView ls_view;
     public fragment_subject_list() {
         // Required empty public constructor
-***REMOVED***
+    }
 
 
 
@@ -42,7 +42,7 @@ public class fragment_subject_list extends Fragment {
         ((ListView)_view.findViewById(R.id.list_subject)).setOnItemClickListener(new clickListener_list_subject());
 
         return this._view;
-***REMOVED***
+    }
 
 
     @Override
@@ -61,14 +61,14 @@ public class fragment_subject_list extends Fragment {
             ((LinearLayout)_view.findViewById(R.id.subject_notice)).setVisibility(View.GONE);
             ((ListView)_view.findViewById(R.id.list_subject)).setVisibility(View.VISIBLE);
             this.subj_objs=new adapter_subject(getContext(), subjects);
-***REMOVED***
+        }
         else
         {
             ((FrameLayout)_view.findViewById(R.id.subject_list_frame)).setBackgroundColor(Color.parseColor("#ffffff"));
             ((LinearLayout)_view.findViewById(R.id.subject_notice)).setVisibility(View.VISIBLE);
             ((ListView)_view.findViewById(R.id.list_subject)).setVisibility(View.GONE);
             this.subj_objs = null;
-***REMOVED***
+        }
 
         this.ls_view=((ListView)_view.findViewById(R.id.list_subject));
         this.ls_view.setAdapter(this.subj_objs);
@@ -77,7 +77,7 @@ public class fragment_subject_list extends Fragment {
 //
 
 
-***REMOVED***
+    }
 
 
 
@@ -85,4 +85,4 @@ public class fragment_subject_list extends Fragment {
 
 
 
-***REMOVED***
+}

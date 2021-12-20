@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 
 /**
- * A simple {@link Fragment***REMOVED*** subclass.
+ * A simple {@link Fragment} subclass.
  */
 public class fragment_assg_pending extends Fragment {
 
@@ -27,7 +27,7 @@ public class fragment_assg_pending extends Fragment {
     private ListView ls_view;
     public fragment_assg_pending() {
         // Required empty public constructor
-***REMOVED***
+    }
 
 
 
@@ -41,7 +41,7 @@ public class fragment_assg_pending extends Fragment {
         this._view=view;
         ((ListView)_view.findViewById(R.id.list_pending)).setOnItemClickListener(new clickListener_list_assignment());
         return view;
-***REMOVED***
+    }
 
     @Override
     public void onResume()
@@ -67,14 +67,14 @@ public class fragment_assg_pending extends Fragment {
             Log.i("Number of assg_obs", String.valueOf(this.assg_objs.getCount()));
 
 
-***REMOVED***
+        }
         else {
 
             ((FrameLayout)_view.findViewById(R.id.assg_pend_frame)).setBackgroundColor(Color.parseColor("#ffffff"));
             ((ListView)_view.findViewById(R.id.list_pending)).setVisibility(View.GONE);
             ((LinearLayout)_view.findViewById(R.id.assg_pend_notice)).setVisibility(View.VISIBLE);
             this.assg_objs = null;
-***REMOVED***
+        }
 
 
         this.ls_view=((ListView)_view.findViewById(R.id.list_pending));
@@ -87,10 +87,10 @@ public class fragment_assg_pending extends Fragment {
 
 
 
-***REMOVED***
+    }
 
 
 
 
 
-***REMOVED***
+}

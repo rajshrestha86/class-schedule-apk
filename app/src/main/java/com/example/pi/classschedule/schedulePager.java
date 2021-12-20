@@ -18,24 +18,24 @@ public class schedulePager extends FragmentPagerAdapter {
     public schedulePager(FragmentManager fm)
     {
         super(fm);
-***REMOVED***
+    }
 
     @Override
     public Fragment getItem(int position)
     {
 
         return fragments.get(position);
-***REMOVED***
+    }
 
     @Override
     public int getCount() {
         return fragments.size();
-***REMOVED***
+    }
     //ADD PAGE
     public void addFragment(Fragment f)
     {
         fragments.add(f);
-***REMOVED***
+    }
 
 
     @Override
@@ -59,6 +59,6 @@ public class schedulePager extends FragmentPagerAdapter {
 
             default:
                 return "Ollo";
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

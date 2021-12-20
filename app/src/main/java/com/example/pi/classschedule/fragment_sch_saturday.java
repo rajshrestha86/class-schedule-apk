@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 
 /**
- * A simple {@link Fragment***REMOVED*** subclass.
+ * A simple {@link Fragment} subclass.
  */
 public class fragment_sch_saturday extends Fragment {
 
@@ -30,7 +30,7 @@ public class fragment_sch_saturday extends Fragment {
 
     public fragment_sch_saturday() {
         // Required empty public constructor
-***REMOVED***
+    }
 
 
     @Override
@@ -43,7 +43,7 @@ public class fragment_sch_saturday extends Fragment {
 
         return view;
 
-***REMOVED***
+    }
 
     @Override
     public void onResume() {
@@ -57,8 +57,8 @@ public class fragment_sch_saturday extends Fragment {
 //                Intent add_activity=new Intent(getActivity(), activity_addSchedule.class);
 //                add_activity.putExtra("Day", "Saturday");
 //                startActivityForResult(add_activity, 111);
-//    ***REMOVED***
-//***REMOVED***);
+//            }
+//        });
 
         if (this.helper == null)
             this.helper = new db_helper(getActivity(), null, null, 1);
@@ -69,12 +69,12 @@ public class fragment_sch_saturday extends Fragment {
             ((LinearLayout)_view.findViewById(R.id.sat_notice)).setVisibility(View.GONE);
             this.sch_objs = new adapter_schedule(getContext(), schedules);
             this._number_class=schedules.size();
-***REMOVED***
+        }
         else {
             ((LinearLayout)_view.findViewById(R.id.sat_notice)).setVisibility(View.VISIBLE);
             this.sch_objs = null;
             this._number_class=0;
-***REMOVED***
+        }
 
 
         this.ls_view = ((ListView) _view.findViewById(R.id.saturday_sch_list));
@@ -82,5 +82,5 @@ public class fragment_sch_saturday extends Fragment {
         this.ls_view.setAdapter(this.sch_objs);
 
 
-***REMOVED***
-***REMOVED***
+    }
+}

@@ -29,7 +29,7 @@ public class adapter_schedule extends ArrayAdapter<object_schedule> {
     public adapter_schedule(@NonNull Context context, @NonNull List<object_schedule> objects)
     {
         super(context, 0, objects);
-***REMOVED***
+    }
 
     @NonNull
     @Override
@@ -50,10 +50,10 @@ public class adapter_schedule extends ArrayAdapter<object_schedule> {
         try {
             _24HourDt_start = _24HourSDF.parse(_24HourTime_start);
             _24HourDt_end = _24HourSDF.parse(_24HourTime_end);
-***REMOVED***catch (Exception e)
+        }catch (Exception e)
         {
             return ConvertView;
-***REMOVED***
+        }
 
         TextView sub_name=((TextView)ConvertView.findViewById(R.id.sch_list_sub));
         sub_name.setText(sch_obj.get_sub_name());
@@ -106,23 +106,23 @@ public class adapter_schedule extends ArrayAdapter<object_schedule> {
 
         if ( _start<=_now && _end>=_now) {
             ((View)ConvertView.findViewById(R.id.schedule_item)).setBackgroundColor(getContext().getResources().getColor(R.color.NowColor));
-***REMOVED***
+        }
         else
         {
             ((View)ConvertView.findViewById(R.id.schedule_item)).setBackgroundColor(Color.WHITE);
-***REMOVED***
+        }
 
 
         return ConvertView;
-***REMOVED***
+    }
 
 
     private Date parseDate(String date) {
 
         try {
             return inputParser.parse(date);
-***REMOVED*** catch (java.text.ParseException e) {
+        } catch (java.text.ParseException e) {
             return new Date(0);
-***REMOVED***
-***REMOVED***
-***REMOVED***
+        }
+    }
+}

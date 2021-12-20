@@ -26,7 +26,7 @@ public class fragment_sch_monday extends Fragment {
 
     public fragment_sch_monday() {
         // Required empty public constructor
-***REMOVED***
+    }
 
 
 
@@ -41,7 +41,7 @@ public class fragment_sch_monday extends Fragment {
         ((ListView)_view.findViewById(R.id.monday_sch_list)).setOnItemClickListener(new clickListener_list_schedule());
         return view;
 
-***REMOVED***
+    }
 
     @Override
     public void onResume() {
@@ -58,12 +58,12 @@ public class fragment_sch_monday extends Fragment {
             ((LinearLayout)_view.findViewById(R.id.mon_notice)).setVisibility(View.GONE);
             this.sch_objs = new adapter_schedule(getContext(), schedules);
             this._number_class=schedules.size();
-***REMOVED***
+        }
         else {
             ((LinearLayout)_view.findViewById(R.id.mon_notice)).setVisibility(View.VISIBLE);
             this.sch_objs = null;
             this._number_class=0;
-***REMOVED***
+        }
 
 
         this.ls_view=((ListView)_view.findViewById(R.id.monday_sch_list));
@@ -72,5 +72,5 @@ public class fragment_sch_monday extends Fragment {
 
 
 
-***REMOVED***
-***REMOVED***
+    }
+}

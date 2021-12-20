@@ -15,7 +15,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 /**
- * A simple {@link Fragment***REMOVED*** subclass.
+ * A simple {@link Fragment} subclass.
  */
 public class fragment_assg_submitted extends Fragment {
 
@@ -29,7 +29,7 @@ public class fragment_assg_submitted extends Fragment {
 
     public fragment_assg_submitted() {
         // Required empty public constructor
-***REMOVED***
+    }
 
 
     @Override
@@ -40,7 +40,7 @@ public class fragment_assg_submitted extends Fragment {
         ((ListView)_view.findViewById(R.id.list_submitted)).setOnItemClickListener(new clickListener_list_assignment());
 
         return view;
-***REMOVED***
+    }
 
 
     public void onResume()
@@ -60,13 +60,13 @@ public class fragment_assg_submitted extends Fragment {
             ((LinearLayout)_view.findViewById(R.id.assg_submitted_notice)).setVisibility(View.GONE);
             ((ListView)_view.findViewById(R.id.list_submitted)).setVisibility(View.VISIBLE);
             this.assg_objs = new adapter_assignment(getContext(), assignments);
-***REMOVED***
+        }
         else {
             ((FrameLayout)_view.findViewById(R.id.assg_submitted_frame)).setBackgroundColor(Color.parseColor("#ffffff"));
             ((LinearLayout)_view.findViewById(R.id.assg_submitted_notice)).setVisibility(View.VISIBLE);
             ((ListView)_view.findViewById(R.id.list_submitted)).setVisibility(View.GONE);
             this.assg_objs = null;
-***REMOVED***
+        }
 
 
         this.ls_view=((ListView)_view.findViewById(R.id.list_submitted));
@@ -78,7 +78,7 @@ public class fragment_assg_submitted extends Fragment {
 
 
 
-***REMOVED***
+    }
 
 
-***REMOVED***
+}

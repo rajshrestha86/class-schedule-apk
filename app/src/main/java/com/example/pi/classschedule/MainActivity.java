@@ -59,19 +59,19 @@ public class MainActivity extends AppCompatActivity
         prev=R.id.nav_home;
         onHome();
 
-***REMOVED***
+    }
 
 
     DrawerLayout.DrawerListener listener=new DrawerLayout.DrawerListener() {
         @Override
         public void onDrawerSlide(View drawerView, float slideOffset) {
 
-***REMOVED***
+        }
 
         @Override
         public void onDrawerOpened(View drawerView) {
 
-***REMOVED***
+        }
 
         @Override
         public void onDrawerClosed(View drawerView) {
@@ -79,12 +79,12 @@ public class MainActivity extends AppCompatActivity
             if(prev==_item_id) {
                 prev=_item_id;
                 return;
-    ***REMOVED***
+            }
 
             if(_item_id==R.id.nav_home)
             {
                 onHome();
-    ***REMOVED***
+            }
             else if (_item_id == R.id.nav_sub_add) {
                 //            Visibility
                 ((TabLayout)findViewById(R.id.tabs)).setVisibility(View.GONE);
@@ -95,8 +95,8 @@ public class MainActivity extends AppCompatActivity
                     public void onClick(View v) {
                         Intent add_activity=new Intent(getApplicationContext(), activity_addSubject.class);
                         startActivityForResult(add_activity, 111);
-            ***REMOVED***
-        ***REMOVED***);
+                    }
+                });
                 //            ####################
                 FragmentTransaction ft_pending=getSupportFragmentManager().beginTransaction();
                 ft_pending.setCustomAnimations(R.anim.fadein, R.anim.fadeout);
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity
                 ft_pending.commit();
                 ((FrameLayout)findViewById(R.id.fragment_container)).setVisibility(View.VISIBLE);
 
-    ***REMOVED*** else if (_item_id == R.id.nav_view_sch) {
+            } else if (_item_id == R.id.nav_view_sch) {
 //                Set Visibility
 
 
@@ -118,8 +118,8 @@ public class MainActivity extends AppCompatActivity
 //                    public void onClick(View v) {
 //                        Intent add_activity=new Intent(getApplicationContext(), activity_addSchedule.class);
 //                        startActivityForResult(add_activity, 111);
-//            ***REMOVED***
-//        ***REMOVED***);
+//                    }
+//                });
 
                 FragmentTransaction ft_pending=getSupportFragmentManager().beginTransaction();
 //                ft_pending.setCustomAnimations(R.anim.fadein, R.anim.fadeout);
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity
                     prev=_item_id;
 //                    ((FrameLayout)findViewById(R.id.fragment_container)).setVisibility(View.INVISIBLE);
                     return;
-        ***REMOVED***
+                }
                 vp= (ViewPager) findViewById(R.id.pager);
                 addPages();
                 Calendar calendar = Calendar.getInstance();
@@ -153,20 +153,20 @@ public class MainActivity extends AppCompatActivity
                                 Intent add_activity=new Intent(getApplicationContext(), activity_addSchedule.class);
                                 add_activity.putExtra("Day", String.valueOf(tab.getPosition()));
                                 startActivityForResult(add_activity, 111);
-                    ***REMOVED***
-                ***REMOVED***);
-            ***REMOVED***
+                            }
+                        });
+                    }
 
                     @Override
                     public void onTabUnselected(TabLayout.Tab tab) {
 
-            ***REMOVED***
+                    }
 
                     @Override
                     public void onTabReselected(TabLayout.Tab tab) {
 
-            ***REMOVED***
-        ***REMOVED***);
+                    }
+                });
 
                 TabLayout.Tab tabs=tabLayout.getTabAt(day-1);
                 tabs.select();
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-    ***REMOVED***   else if (_item_id == R.id.nav_ass_pending) {
+            }   else if (_item_id == R.id.nav_ass_pending) {
 //            Visibility
 
                 ((FrameLayout)findViewById(R.id.fragment_container)).setVisibility(View.VISIBLE);
@@ -190,8 +190,8 @@ public class MainActivity extends AppCompatActivity
                     public void onClick(View v) {
                         Intent add_activity=new Intent(getApplicationContext(), activity_addAssignment.class);
                         startActivityForResult(add_activity, 111);
-            ***REMOVED***
-        ***REMOVED***);
+                    }
+                });
 
 //            ######
                 FragmentTransaction ft_pending=getSupportFragmentManager().beginTransaction();
@@ -200,7 +200,7 @@ public class MainActivity extends AppCompatActivity
                 ft_pending.commit();
                 ((FrameLayout)findViewById(R.id.fragment_container)).setVisibility(View.VISIBLE);
 
-    ***REMOVED***
+            }
             else if (_item_id == R.id.nav_ass_submitted) {
 //            Visibility
                 ((FrameLayout)findViewById(R.id.fragment_container)).setVisibility(View.VISIBLE);
@@ -212,8 +212,8 @@ public class MainActivity extends AppCompatActivity
                     public void onClick(View v) {
                         Intent add_activity=new Intent(getApplicationContext(), activity_addAssignment.class);
                         startActivityForResult(add_activity, 111);
-            ***REMOVED***
-        ***REMOVED***);
+                    }
+                });
 //            ######
                 FrameLayout frame=(FrameLayout)findViewById(R.id.fragment_container);
                 Fragment frag_pending=new fragment_assg_submitted();
@@ -223,16 +223,16 @@ public class MainActivity extends AppCompatActivity
                 ft_pending.commit();
 
 
-    ***REMOVED***
+            }
             prev=_item_id;
 
-***REMOVED***
+        }
 
         @Override
         public void onDrawerStateChanged(int newState) {
 
-***REMOVED***
-***REMOVED***;
+        }
+    };
 
 
     @Override
@@ -240,17 +240,17 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-***REMOVED*** else {
+        } else {
             super.onBackPressed();
-***REMOVED***
-***REMOVED***
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-***REMOVED***
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -262,10 +262,10 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             startActivity(new Intent(this, activity_about.class));
-***REMOVED***
+        }
 
         return super.onOptionsItemSelected(item);
-***REMOVED***
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
@@ -275,7 +275,7 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-***REMOVED***
+    }
 
 
 
@@ -288,7 +288,7 @@ public class MainActivity extends AppCompatActivity
         FragmentTransaction ft=getSupportFragmentManager().beginTransaction();
         ft.detach(currentFragment);
         ft.attach(currentFragment);
-***REMOVED***
+    }
 
 
     public void addPages()
@@ -305,7 +305,7 @@ public class MainActivity extends AppCompatActivity
 
 
 
-***REMOVED***
+    }
 
 
     public void onHome()
@@ -322,13 +322,13 @@ public class MainActivity extends AppCompatActivity
         ft.commit();
         ((FrameLayout)findViewById(R.id.fragment_container)).setVisibility(View.VISIBLE);
 
-***REMOVED***
+    }
 
     public void onTabSelected(TabLayout.Tab tab) {
         vp.setCurrentItem(tab.getPosition());
-***REMOVED***
+    }
 
 
 
 
-***REMOVED***
+}

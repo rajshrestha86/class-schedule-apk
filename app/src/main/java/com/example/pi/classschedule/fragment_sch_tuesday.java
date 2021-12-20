@@ -24,7 +24,7 @@ public class fragment_sch_tuesday extends Fragment {
 
     public fragment_sch_tuesday() {
         // Required empty public constructor
-***REMOVED***
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -36,7 +36,7 @@ public class fragment_sch_tuesday extends Fragment {
 
         return view;
 
-***REMOVED***
+    }
 
     @Override
     public void onResume() {
@@ -51,12 +51,12 @@ public class fragment_sch_tuesday extends Fragment {
             ((LinearLayout)_view.findViewById(R.id.tue_notice)).setVisibility(View.GONE);
             this.sch_objs = new adapter_schedule(getContext(), schedules);
 
-***REMOVED***
+        }
         else {
             ((LinearLayout)_view.findViewById(R.id.tue_notice)).setVisibility(View.VISIBLE);
             this.sch_objs = null;
 
-***REMOVED***
+        }
 
 
         this.ls_view=((ListView)_view.findViewById(R.id.tuesday_sch_list));
@@ -66,5 +66,5 @@ public class fragment_sch_tuesday extends Fragment {
 
 
 
-***REMOVED***
-***REMOVED***
+    }
+}

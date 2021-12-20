@@ -21,5 +21,5 @@ public class clickListener_list_schedule implements AdapterView.OnItemClickListe
 
 
 
-***REMOVED***
-***REMOVED***
+    }
+}
