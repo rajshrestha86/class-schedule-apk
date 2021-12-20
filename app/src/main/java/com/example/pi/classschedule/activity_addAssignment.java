@@ -42,8 +42,8 @@ public class activity_addAssignment extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 
 //      Database helper for transactions
@@ -62,15 +62,15 @@ public class activity_addAssignment extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog(100);
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
         ((EditText) findViewById(R.id.ass_reminder_datetime)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 showDialog(101);
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 //        ##################################
 
@@ -88,14 +88,14 @@ public class activity_addAssignment extends AppCompatActivity {
             if(edit_assg_obj.get_status().compareTo("Pending")==0)
             {
                 ((RadioButton) findViewById(R.id.ass_pending)).setChecked(true);
-    ***REMOVED***else
+            }else
                 ((RadioButton) findViewById(R.id.ass_submitted)).setChecked(true);
 
             ((Button)findViewById(R.id.addBut_assg)).setText("UPDATE");
             ((Button)findViewById(R.id.delBut_assg)).setVisibility(View.VISIBLE);
 
 
-***REMOVED***
+        }
 
 
 
@@ -110,7 +110,7 @@ public class activity_addAssignment extends AppCompatActivity {
                 if (((Spinner) findViewById(R.id.ass_sub_spinner)).getSelectedItem() == null) {
                     Toast.makeText(getApplicationContext(), "Please Add Subjects.", Toast.LENGTH_LONG).show();
                     return;
-        ***REMOVED***
+                }
 
 //                Check for blank fields
                 boolean validator = ((EditText) findViewById(R.id.ass_name)).getText().toString().isEmpty() || ((EditText) findViewById(R.id.ass_submission_datetime)).getText().toString().isEmpty() || ((EditText) findViewById(R.id.ass_reminder_datetime)).getText().toString().isEmpty();
@@ -119,7 +119,7 @@ public class activity_addAssignment extends AppCompatActivity {
 
                     Toast.makeText(getApplicationContext(), "One or More Fields are Empty.", Toast.LENGTH_LONG).show();
                     return;
-        ***REMOVED***
+                }
 
 
 
@@ -169,7 +169,7 @@ public class activity_addAssignment extends AppCompatActivity {
                         setResult(Activity.RESULT_OK);
                         finish();
                         return;
-            ***REMOVED***
+                    }
 
                     Toast.makeText(getApplicationContext(), "Error. Assignment cannot be updated.", Toast.LENGTH_SHORT).show();
                     finish();
@@ -177,18 +177,18 @@ public class activity_addAssignment extends AppCompatActivity {
 
 
 
-        ***REMOVED***
+                }
 
                 if (assg_handler.addAssgn(assg)) {
                     Toast.makeText(getApplicationContext(), "Assignment for " + _sub + " has been Stored.", Toast.LENGTH_SHORT).show();
                     setResult(Activity.RESULT_OK);
                     finish();
-        ***REMOVED*** else
+                } else
                     Toast.makeText(getApplicationContext(), "Error. Schedule cannot be added.", Toast.LENGTH_SHORT).show();
 
 
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 //        Deletion
         ((Button)findViewById(R.id.delBut_assg)).setOnClickListener(new View.OnClickListener() {
@@ -201,11 +201,11 @@ public class activity_addAssignment extends AppCompatActivity {
                 else
                     Toast.makeText(getApplicationContext(),"Error. Please try Again.", Toast.LENGTH_SHORT).show();
                 finish();
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 
-***REMOVED***
+    }
 
     @Override
     protected Dialog onCreateDialog(int id)
@@ -218,7 +218,7 @@ public class activity_addAssignment extends AppCompatActivity {
         if(id==101)
             return new DatePickerDialog(this,myDateListener2, cal.get(Calendar.YEAR), cal.get(Calendar.MONTH), cal.get(Calendar.DAY_OF_MONTH ));
         return null;
-***REMOVED***
+    }
 
 
 
@@ -231,11 +231,11 @@ public class activity_addAssignment extends AppCompatActivity {
             Calendar cal=Calendar.getInstance();
             if(arg1<cal.get(Calendar.YEAR) && arg2<cal.get(Calendar.MONTH) && arg3<cal.get(Calendar.DAY_OF_MONTH) ){
                 Toast.makeText(getApplicationContext(), "Please enter the correct Submission Date.", Toast.LENGTH_SHORT).show();
-    ***REMOVED***
+            }
 
             ((EditText)findViewById(R.id.ass_submission_datetime)).setText(String.valueOf(arg1)+"-"+String.valueOf(arg2+1)+"-"+String.valueOf(arg3));
-***REMOVED***
-***REMOVED***;
+        }
+    };
 
 
 
@@ -250,9 +250,9 @@ public class activity_addAssignment extends AppCompatActivity {
             if(arg1<cal.get(Calendar.YEAR) && arg2<cal.get(Calendar.MONTH) && arg3<cal.get(Calendar.DAY_OF_MONTH) ){
                 Toast.makeText(getApplicationContext(), "Please enter the correct Reminder Date.", Toast.LENGTH_SHORT).show();
                 return;
-    ***REMOVED***
+            }
 
             ((EditText)findViewById(R.id.ass_reminder_datetime)).setText(String.valueOf(arg1)+"-"+String.valueOf(arg2+1)+"-"+String.valueOf(arg3));
-***REMOVED***
-***REMOVED***;
-***REMOVED***
+        }
+    };
+}

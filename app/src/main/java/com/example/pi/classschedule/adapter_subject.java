@@ -20,7 +20,7 @@ public class adapter_subject extends ArrayAdapter<object_subject> {
     public adapter_subject(@NonNull Context context, @NonNull List<object_subject> objects)
     {
         super(context, 0, objects);
-***REMOVED***
+    }
 
 
 
@@ -42,5 +42,5 @@ public class adapter_subject extends ArrayAdapter<object_subject> {
         return ConvertView;
 
 
-***REMOVED***
-***REMOVED***
+    }
+}

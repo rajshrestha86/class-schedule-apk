@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 
 /**
- * A simple {@link Fragment***REMOVED*** subclass.
+ * A simple {@link Fragment} subclass.
  */
 public class fragment_sch_sunday extends Fragment {
 
@@ -27,7 +27,7 @@ public class fragment_sch_sunday extends Fragment {
     private int _number_class;
     public fragment_sch_sunday() {
         // Required empty public constructor
-***REMOVED***
+    }
 
 
     @Override
@@ -47,7 +47,7 @@ public class fragment_sch_sunday extends Fragment {
         ((ListView)_view.findViewById(R.id.sunday_sch_list)).setOnItemClickListener(new clickListener_list_schedule());
         return view;
 
-***REMOVED***
+    }
 
     @Override
     public void onResume() {
@@ -62,12 +62,12 @@ public class fragment_sch_sunday extends Fragment {
             ((LinearLayout)_view.findViewById(R.id.sun_notice)).setVisibility(View.GONE);
             this.sch_objs = new adapter_schedule(getContext(), schedules);
             this._number_class=schedules.size();
-***REMOVED***
+        }
         else {
             ((LinearLayout)_view.findViewById(R.id.sun_notice)).setVisibility(View.VISIBLE);
             this.sch_objs = null;
             this._number_class=0;
-***REMOVED***
+        }
 
 
         this.ls_view=((ListView)_view.findViewById(R.id.sunday_sch_list));
@@ -75,5 +75,5 @@ public class fragment_sch_sunday extends Fragment {
         this.ls_view.setAdapter(this.sch_objs);
 
         
-***REMOVED***
-***REMOVED***
+    }
+}

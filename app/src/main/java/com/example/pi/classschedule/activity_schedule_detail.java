@@ -23,8 +23,8 @@ public class activity_schedule_detail extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 
 
@@ -44,10 +44,10 @@ public class activity_schedule_detail extends AppCompatActivity {
         try {
             _24HourDt_start = _24HourSDF.parse(_24HourTime_start);
             _24HourDt_end = _24HourSDF.parse(_24HourTime_end);
-***REMOVED***catch (Exception e)
+        }catch (Exception e)
         {
 
-***REMOVED***
+        }
         String _start=_12HourSDF.format(_24HourDt_start);
         String _end=_12HourSDF.format(_24HourDt_end);
 
@@ -67,8 +67,8 @@ public class activity_schedule_detail extends AppCompatActivity {
                 sch_edit.putExtra("sch_obj",sch);
                 startActivity(sch_edit);
                 finish();
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
         ((ImageView)findViewById(R.id.sch_detail_delete)).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,10 +80,10 @@ public class activity_schedule_detail extends AppCompatActivity {
                 else
                     Toast.makeText(getApplicationContext(),"Error. Please try Again.", Toast.LENGTH_SHORT).show();
                 finish();
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 
 
-***REMOVED***
-***REMOVED***
+    }
+}

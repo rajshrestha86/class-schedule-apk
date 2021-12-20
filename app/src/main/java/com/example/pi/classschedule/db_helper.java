@@ -46,7 +46,7 @@ public class db_helper extends SQLiteOpenHelper {
     public db_helper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DATABASE_NAME, factory, DATABASE_VERSION);
 
-***REMOVED***
+    }
 
 
     @Override
@@ -59,7 +59,7 @@ public class db_helper extends SQLiteOpenHelper {
         db.execSQL(CREATE_ASSGN_TABLE);
         db.execSQL(CREATE_TABLE_SCH);
 
-***REMOVED***
+    }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -69,7 +69,7 @@ public class db_helper extends SQLiteOpenHelper {
         onCreate(db);
 
 
-***REMOVED***
+    }
 
 
     public boolean addSubject(object_subject subj)
@@ -84,15 +84,15 @@ public class db_helper extends SQLiteOpenHelper {
 
         try {
             db.insert(TABLE_SUBJECTS, null, values);
-***REMOVED***catch(Exception e)
+        }catch(Exception e)
         {
             return false;
-***REMOVED***
+        }
 
         db.close();
         return true;
 
-***REMOVED***
+    }
 
     public object_subject findSubject(String subj_name, String th_or_pra)
     {
@@ -112,7 +112,7 @@ public class db_helper extends SQLiteOpenHelper {
             subj.set_t_p(cursor.getString(3));
             cursor.close();
 
-***REMOVED***
+        }
         else
             subj=null;
 
@@ -121,7 +121,7 @@ public class db_helper extends SQLiteOpenHelper {
 
 
 
-***REMOVED***
+    }
 
     public ArrayList<String> list_all_inst()
     {
@@ -133,7 +133,7 @@ public class db_helper extends SQLiteOpenHelper {
         if(db==null)
         {
             return null;
-***REMOVED***
+        }
         Cursor cursor=db.rawQuery(query,null);
 
         if(cursor.moveToFirst())
@@ -142,13 +142,13 @@ public class db_helper extends SQLiteOpenHelper {
             {
                 inst.add(cursor.getString(2));
                 cursor.moveToNext();
-    ***REMOVED***
+            }
             inst.add(cursor.getString(2));
 
-***REMOVED***
+        }
         db.close();
         return inst;
-***REMOVED***
+    }
 
 
     public ArrayList<String> list_all_subject_name()
@@ -164,18 +164,18 @@ public class db_helper extends SQLiteOpenHelper {
             {
                 subjects.add(cursor.getString(1)+"-"+cursor.getString(3));
                 cursor.moveToNext();
-    ***REMOVED***
+            }
             subjects.add(cursor.getString(1)+"-"+cursor.getString(3));
             cursor.moveToNext();
 
-***REMOVED***
+        }
         db.close();
         return subjects;
 
 
 
 
-***REMOVED***
+    }
     public ArrayList<object_subject> list_all_subjects()
     {
         ArrayList<object_subject> subs=new ArrayList<>();
@@ -194,7 +194,7 @@ public class db_helper extends SQLiteOpenHelper {
                 sub.set_t_p(cursor.getString(3));
                 subs.add(sub);
                 cursor.moveToNext();
-    ***REMOVED***
+            }
             object_subject sub=new object_subject();
             sub.setID(cursor.getInt(0));
             sub.set_sub_name(cursor.getString(1));
@@ -203,10 +203,10 @@ public class db_helper extends SQLiteOpenHelper {
             subs.add(sub);
             cursor.moveToNext();
 
-***REMOVED***
+        }
         db.close();
         return subs;
-***REMOVED***
+    }
 
 
 
@@ -234,7 +234,7 @@ public class db_helper extends SQLiteOpenHelper {
                 assg.set_ins_name(cursor.getString(7));
                 assignments.add(assg);
                 cursor.moveToNext();
-    ***REMOVED***
+            }
 
             object_assignment assg=new object_assignment();
             assg.set_id(cursor.getInt(0));
@@ -249,10 +249,10 @@ public class db_helper extends SQLiteOpenHelper {
             cursor.moveToNext();
 
 
-***REMOVED***
+        }
         db.close();
         return assignments;
-***REMOVED***
+    }
 
 
     public int list_today_assg(String date)
@@ -263,7 +263,7 @@ public class db_helper extends SQLiteOpenHelper {
         int number=cursor.getCount();
         db.close();
         return number;
-***REMOVED***
+    }
 
     public boolean addAssgn(object_assignment assg)
     {
@@ -278,15 +278,15 @@ public class db_helper extends SQLiteOpenHelper {
         SQLiteDatabase db=this.getWritableDatabase();
         try {
             db.insert(TABLE_ASSIGNMENTS, null, values);
-***REMOVED***catch(Exception e)
+        }catch(Exception e)
         {
             return false;
-***REMOVED***
+        }
 
         db.close();
         return true;
 
-***REMOVED***
+    }
 
     public boolean addSchedule(object_schedule sch)
     {
@@ -301,15 +301,15 @@ public class db_helper extends SQLiteOpenHelper {
         SQLiteDatabase db=this.getWritableDatabase();
         try {
             db.insert(TABLE_SCH, null, values);
-***REMOVED***catch(Exception e)
+        }catch(Exception e)
         {
             return false;
-***REMOVED***
+        }
 
         db.close();
         return true;
 
-***REMOVED***
+    }
 
     public boolean updateSchedule(object_schedule sch)
     {
@@ -325,15 +325,15 @@ public class db_helper extends SQLiteOpenHelper {
 
         try {
             db.update(TABLE_SCH,  values, " _id= "+String.valueOf(sch.get_id()), null);
-***REMOVED***catch(Exception e)
+        }catch(Exception e)
         {
             return false;
-***REMOVED***
+        }
 
         db.close();
         return true;
 
-***REMOVED***
+    }
 
 
     public ArrayList<object_schedule> getSchedule_day(String day)
@@ -362,7 +362,7 @@ public class db_helper extends SQLiteOpenHelper {
                 sch.set_th_or_p(cursor.getString(8));
                 schedules.add(sch);
                 cursor.moveToNext();
-    ***REMOVED***
+            }
             object_schedule sch=new object_schedule();
             sch.set_sub_name(cursor.getString(0));
             sch.set_sub_id(Integer.parseInt(cursor.getString(1)));
@@ -375,7 +375,7 @@ public class db_helper extends SQLiteOpenHelper {
             sch.set_th_or_p(cursor.getString(8));
             schedules.add(sch);
 
-***REMOVED***
+        }
         else
             schedules=null;
 
@@ -384,7 +384,7 @@ public class db_helper extends SQLiteOpenHelper {
 
 
 
-***REMOVED***
+    }
 
     public int delete_schedule(int id)
     {
@@ -395,7 +395,7 @@ public class db_helper extends SQLiteOpenHelper {
 
 
 
-***REMOVED***
+    }
 
     public int delete_subject(int id)
     {
@@ -406,7 +406,7 @@ public class db_helper extends SQLiteOpenHelper {
 
 
 
-***REMOVED***
+    }
 
 
     public boolean updateSubject(object_subject sub)
@@ -422,15 +422,15 @@ public class db_helper extends SQLiteOpenHelper {
 
         try {
             db.update(TABLE_SUBJECTS,  values, " _id= "+String.valueOf(sub.getID()), null);
-***REMOVED***catch(Exception e)
+        }catch(Exception e)
         {
             return false;
-***REMOVED***
+        }
 
         db.close();
         return true;
 
-***REMOVED***
+    }
 
 
     public boolean updateAssignment(object_assignment assg)
@@ -448,15 +448,15 @@ public class db_helper extends SQLiteOpenHelper {
 
         try {
             db.update(TABLE_ASSIGNMENTS,  values, " _id= "+String.valueOf(assg.getID()), null);
-***REMOVED***catch(Exception e)
+        }catch(Exception e)
         {
             return false;
-***REMOVED***
+        }
 
         db.close();
         return true;
 
-***REMOVED***
+    }
 
 
     public int delete_assignment(int id)
@@ -468,12 +468,12 @@ public class db_helper extends SQLiteOpenHelper {
 
 
 
-***REMOVED***
+    }
 
 
 
 
 
-***REMOVED***
+}
 
 

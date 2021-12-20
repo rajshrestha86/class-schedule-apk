@@ -53,8 +53,8 @@ public class activity_addSchedule extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 
 //        Fills the spinner for subjects in schedule
@@ -82,9 +82,9 @@ public class activity_addSchedule extends AppCompatActivity {
         String position;
         try{
        position=(String)getIntent().getSerializableExtra("Day");
-***REMOVED***catch (Exception e) {
+        }catch (Exception e) {
             position = "";
-***REMOVED***
+        }
         if(position!=null)
             ((Spinner) findViewById(R.id.sch_day_spinner)).setSelection(Integer.valueOf(position));
 
@@ -122,10 +122,10 @@ public class activity_addSchedule extends AppCompatActivity {
                         Date _24HourDt;
                         try {
                             _24HourDt = _24HourSDF.parse(_24HourTime);
-                ***REMOVED***catch (Exception e)
+                        }catch (Exception e)
                         {
                             return;
-                ***REMOVED***
+                        }
 
                             ((EditText) findViewById(R.id.sch_start_time)).setText(_12HourSDF.format(_24HourDt));
                             start_mHour=hourOfDay;
@@ -134,12 +134,12 @@ public class activity_addSchedule extends AppCompatActivity {
 
 
 
-            ***REMOVED***
-        ***REMOVED***,start_mHour, start_mMinute, false);
+                    }
+                },start_mHour, start_mMinute, false);
                 time_pick.show();
 
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 
         TextView _end_time=(TextView)findViewById(R.id.sch_end_time);
@@ -155,10 +155,10 @@ public class activity_addSchedule extends AppCompatActivity {
                         Date _24HourDt;
                         try {
                             _24HourDt = _24HourSDF.parse(_24HourTime);
-                ***REMOVED***catch (Exception e)
+                        }catch (Exception e)
                         {
                             return;
-                ***REMOVED***
+                        }
 
                         ((EditText) findViewById(R.id.sch_end_time)).setText(_12HourSDF.format(_24HourDt));
                         end_mHour=hourOfDay;
@@ -167,12 +167,12 @@ public class activity_addSchedule extends AppCompatActivity {
 
 
 
-            ***REMOVED***
-        ***REMOVED***,end_mHour, end_mMinute, false);
+                    }
+                },end_mHour, end_mMinute, false);
                 time_pick.show();
 
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 
 //        #####################
@@ -196,7 +196,7 @@ public class activity_addSchedule extends AppCompatActivity {
             {
                 _start=_12HourSDF.format(_24HourSDF.parse(edit_sch_obj.get_start_time()));
                 _end=_12HourSDF.format(_24HourSDF.parse(edit_sch_obj.get_end_time()));
-    ***REMOVED***catch (Exception e){***REMOVED***
+            }catch (Exception e){}
             ((EditText)findViewById(R.id.sch_start_time)).setText(_start);
             ((EditText)findViewById(R.id.sch_end_time)).setText(_end);
             ((EditText)findViewById(R.id.sch_remarks)).setText(edit_sch_obj.get_remarks());
@@ -212,7 +212,7 @@ public class activity_addSchedule extends AppCompatActivity {
 
 
 
-    ***REMOVED***
+            }
 
 
 
@@ -236,7 +236,7 @@ public class activity_addSchedule extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Please add subjects to create schedules.", Toast.LENGTH_LONG).show();
                     return;
 
-        ***REMOVED***
+                }
 
                 String _selected=_sub_spn.getSelectedItem().toString();;
                 String[] splitted=_selected.split("\\-");
@@ -257,10 +257,10 @@ public class activity_addSchedule extends AppCompatActivity {
                 try{
                     _start_time=_24HourSDF.format(_12HourSDF.parse(start_time));
                     _end_time=_24HourSDF.format(_12HourSDF.parse(end_time));
-        ***REMOVED***
+                }
                 catch(Exception e){
                     Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
-        ***REMOVED***
+                }
 
 
 
@@ -270,13 +270,13 @@ public class activity_addSchedule extends AppCompatActivity {
                 if(_sub.isEmpty())
                 {
 
-        ***REMOVED***
+                }
 //                Check for null value
                 if(_start_time.isEmpty() || _end_time.isEmpty())
                 {
                     Toast.makeText(getApplicationContext(), "Start Time and End Time is empty.", Toast.LENGTH_LONG).show();
                     return;
-        ***REMOVED***
+                }
 
 //                Adding a schedule to database.
                 db_helper sch_handler=new db_helper(getApplicationContext(), null, null, 1);
@@ -297,7 +297,7 @@ public class activity_addSchedule extends AppCompatActivity {
                         setResult(Activity.RESULT_OK);
                         finish();
                         return;
-            ***REMOVED***
+                    }
 
                     Toast.makeText(getApplicationContext(), "Error. Schedule cannot be updated.", Toast.LENGTH_SHORT).show();
                     finish();
@@ -305,7 +305,7 @@ public class activity_addSchedule extends AppCompatActivity {
 
 
 
-        ***REMOVED***
+                }
 
                 result=sch_handler.addSchedule(sch);
 //
@@ -314,11 +314,11 @@ public class activity_addSchedule extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), "Schedule added for "+_day+".", Toast.LENGTH_LONG).show();
                     setResult(Activity.RESULT_OK);
                     finish();
-        ***REMOVED***
+                }
                 else
                 {
                     Toast.makeText(getApplicationContext(), "Error. Schedule cannot be added.", Toast.LENGTH_SHORT).show();
-        ***REMOVED***
+                }
 
 
 //
@@ -327,11 +327,11 @@ public class activity_addSchedule extends AppCompatActivity {
 
 
 
-    ***REMOVED***
-***REMOVED***);
-***REMOVED***
+            }
+        });
+    }
 
 
 
 
-***REMOVED***
+}

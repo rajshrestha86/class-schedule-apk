@@ -37,8 +37,8 @@ public class activity_addSubject extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 
 //        Adding Data to Spinner
@@ -71,7 +71,7 @@ public class activity_addSubject extends AppCompatActivity {
             ((Button)findViewById(R.id.delBut_sub)).setVisibility(View.VISIBLE);
 
 
-***REMOVED***
+        }
 
 
 //        ##################################################
@@ -88,7 +88,7 @@ public class activity_addSubject extends AppCompatActivity {
                 {
                     Toast.makeText(getApplicationContext(), "One or More Fields are Empty. ", Toast.LENGTH_SHORT).show();
                     return;
-        ***REMOVED***
+                }
 
 
 
@@ -109,7 +109,7 @@ public class activity_addSubject extends AppCompatActivity {
                         setResult(Activity.RESULT_OK);
                         finish();
                         return;
-            ***REMOVED***
+                    }
 
                     Toast.makeText(getApplicationContext(), "Error. Subject cannot be updated.", Toast.LENGTH_SHORT).show();
                     finish();
@@ -117,7 +117,7 @@ public class activity_addSubject extends AppCompatActivity {
 
 
 
-        ***REMOVED***
+                }
 
 
                 if(helper.addSubject(sub))
@@ -126,13 +126,13 @@ public class activity_addSubject extends AppCompatActivity {
                    Toast.makeText(getApplicationContext(), sub_name.getText().toString()+" has been added.", Toast.LENGTH_SHORT).show();
 //                    setResult(Activity.RESULT_OK);
                     finish();
-        ***REMOVED***
+                }
                 else
                     Toast.makeText(getApplicationContext(), sub_name.getText().toString()+" cannot be added.", Toast.LENGTH_SHORT).show();
 
 
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 
         ((Button)findViewById(R.id.delBut_sub)).setOnClickListener(new View.OnClickListener() {
@@ -145,8 +145,8 @@ public class activity_addSubject extends AppCompatActivity {
                 else
                     Toast.makeText(getApplicationContext(),"Error. Please try Again.", Toast.LENGTH_SHORT).show();
                 finish();
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 
 
@@ -156,5 +156,5 @@ public class activity_addSubject extends AppCompatActivity {
 
 
 
-***REMOVED***
-***REMOVED***
+    }
+}

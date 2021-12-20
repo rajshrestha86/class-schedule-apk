@@ -19,5 +19,5 @@ public class clickListener_list_assignment implements AdapterView.OnItemClickLis
 
 
 
-***REMOVED***
-***REMOVED***
+    }
+}

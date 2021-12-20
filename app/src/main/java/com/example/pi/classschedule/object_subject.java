@@ -16,14 +16,14 @@ public class object_subject implements Serializable{
     public object_subject()
     {
         this._id=0;
-***REMOVED***
+    }
     public object_subject(int id, String sub_name, String inst_name, String t_p)
     {
         this._id=id;
         this._sub_name=sub_name;
         this._inst_name=inst_name;
         this._t_p=t_p;
-***REMOVED***
+    }
 
     public object_subject(String sub_name, String inst_name, String t_p)
     {
@@ -31,45 +31,45 @@ public class object_subject implements Serializable{
         this._sub_name=sub_name;
         this._inst_name=inst_name;
         this._t_p=t_p;
-***REMOVED***
+    }
 
     public void setID(int id)
     {
         this._id=id;
-***REMOVED***
+    }
     public int getID()
     {
         return  this._id;
-***REMOVED***
+    }
 
     public void set_sub_name(String sub_name)
     {
         this._sub_name=sub_name;
-***REMOVED***
+    }
 
     public String get_sub_name()
     {
         return  this._sub_name;
-***REMOVED***
+    }
 
     public  void set_inst_name(String inst_name)
     {
         this._inst_name=inst_name;
-***REMOVED***
+    }
 
     public String get_inst_name()
     {
         return this._inst_name;
-***REMOVED***
+    }
 
     public void set_t_p(String t_p)
     {
         this._t_p=t_p;
-***REMOVED***
+    }
 
     public String get_t_p()
     {
         return  this._t_p;
-***REMOVED***
+    }
 
-***REMOVED***
+}

@@ -32,7 +32,7 @@ import java.util.List;
 
 
 /**
- * A simple {@link Fragment***REMOVED*** subclass.
+ * A simple {@link Fragment} subclass.
  */
 public class fragment_home extends Fragment {
 
@@ -41,7 +41,7 @@ public class fragment_home extends Fragment {
     private View _view;
     public fragment_home() {
         // Required empty public constructor
-***REMOVED***
+    }
 
 
     @Override
@@ -68,15 +68,15 @@ public class fragment_home extends Fragment {
                 num.setGravity(Gravity.CENTER_HORIZONTAL);
                 return num;
 
-    ***REMOVED***
-***REMOVED***;
+            }
+        };
 
         today_th.setFactory(fact);
         today_assg.setFactory(fact);
 
 
         return _view;
-***REMOVED***
+    }
 
 
     @Override
@@ -96,8 +96,8 @@ public class fragment_home extends Fragment {
             public void onClick(View v) {
                 mainActivity.onNavigationItemSelected(navigationView.getMenu().getItem(2));
                 mainActivity.listener.onDrawerClosed((DrawerLayout)mainActivity.findViewById(R.id.drawer_layout));
-    ***REMOVED***
-***REMOVED***);
+            }
+        });
 
 //        Displaying day and Date
         SimpleDateFormat timeStampFormat = new SimpleDateFormat("hh:mm:aa EEEE, MMMM dd yyyy  ");
@@ -134,7 +134,7 @@ public class fragment_home extends Fragment {
         thread.execute();
 
 
-***REMOVED***
+    }
 
 
     private class home_thread extends AsyncTask<String, Void, ArrayList<Integer>>{
@@ -163,13 +163,13 @@ public class fragment_home extends Fragment {
                 {
                     if(schedules.get(i).get_th_or_p().compareTo("Practical")==0)
                         prac_numb++;
-        ***REMOVED***
-    ***REMOVED***
+                }
+            }
 
             else {
                 numb = 0;
                 prac_numb=0;
-    ***REMOVED***
+            }
 
             SimpleDateFormat yearformat = new SimpleDateFormat("yyyy-MM-dd");
             int assg_today=db.list_today_assg(yearformat.format(myDate));
@@ -202,13 +202,13 @@ public class fragment_home extends Fragment {
                 {
                     if(tomorrow_schedules.get(i).get_th_or_p().compareTo("Practical")==0)
                         tomorrow_prac_numb++;
-        ***REMOVED***
-    ***REMOVED***
+                }
+            }
 
             else {
                 tomorrow_numb = 0;
                 tomorrow_prac_numb=0;
-    ***REMOVED***
+            }
             int assg_tomorrow=db.list_today_assg(tomorrow_date);
 
 
@@ -225,7 +225,7 @@ public class fragment_home extends Fragment {
 //            ###################################
 
 
-***REMOVED***
+        }
 
 
         protected void onPostExecute(ArrayList<Integer> result){
@@ -253,10 +253,10 @@ public class fragment_home extends Fragment {
 
 
 
-***REMOVED***
+        }
 
-***REMOVED***
+    }
 
-***REMOVED***
+}
 
 

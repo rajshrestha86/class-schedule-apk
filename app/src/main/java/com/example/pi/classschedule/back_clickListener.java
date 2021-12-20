@@ -14,10 +14,10 @@ public class back_clickListener implements View.OnClickListener {
     public back_clickListener(Activity act)
     {
         this._act=act;
-***REMOVED***
+    }
     @Override
     public void onClick(View v)
     {
      this._act.finish();
-***REMOVED***
-***REMOVED***
+    }
+}
